@@ -9,8 +9,8 @@ import numpy as np
 import pandas as pd
 
 # PARAMETERS-------------------------------------------------   
-input_dir = Path("SCAMS_colocated")  
-out_dir = Path("march1976_daily")
+input_dir = Path("../inputs/SCAMS_colocated")  
+out_dir = Path("../preprocessed-data/march1976_daily")
 out_dir.mkdir(exist_ok=True)
 vars_of_interest = ['LAT','LON','TBCH1','TBCH2','lsm','siconc']
 #-------------------------------------------------------------
