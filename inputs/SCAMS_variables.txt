@@ -1,0 +1,548 @@
+{'TACH1': <class 'netCDF4.Variable'>
+ float64 TACH1(Time, n13_obs)
+     _FillValue: nan
+     long_name: Antenna Temperature of channel 1 (22.235 GHz) at 13 scan positions
+     units: Kelvin [K]
+ unlimited dimensions: 
+ current shape = (213, 13)
+ filling on,
+ 'TACH2': <class 'netCDF4.Variable'>
+ float64 TACH2(Time, n13_obs)
+     _FillValue: nan
+     long_name: Antenna Temperature of channel 2 (31.65 GHz) at 13 scan positions
+     units: Kelvin [K]
+ unlimited dimensions: 
+ current shape = (213, 13)
+ filling on,
+ 'TACH3': <class 'netCDF4.Variable'>
+ float64 TACH3(Time, n13_obs)
+     _FillValue: nan
+     long_name: Antenna Temperature cof hannel 3 (52.85 GHz) at 13 scan positions
+     units: Kelvin [K]
+ unlimited dimensions: 
+ current shape = (213, 13)
+ filling on,
+ 'TACH4': <class 'netCDF4.Variable'>
+ float64 TACH4(Time, n13_obs)
+     _FillValue: nan
+     long_name: Antenna Temperature of channel 4 (53.85 GHz) at 13 scan positions
+     units: Kelvin [K]
+ unlimited dimensions: 
+ current shape = (213, 13)
+ filling on,
+ 'TACH5': <class 'netCDF4.Variable'>
+ float64 TACH5(Time, n13_obs)
+     _FillValue: nan
+     long_name: Antenna Temperature of channel 5 (55.45 GHz) at 13 scan positions
+     units: Kelvin [K]
+ unlimited dimensions: 
+ current shape = (213, 13)
+ filling on,
+ 'TBCH1': <class 'netCDF4.Variable'>
+ float64 TBCH1(Time, n13_obs)
+     _FillValue: nan
+     long_name: Brightness Temperature of channel 1 (22.235 GHz) at 13 scan positions
+     units: Kelvin [K]
+ unlimited dimensions: 
+ current shape = (213, 13)
+ filling on,
+ 'TBCH2': <class 'netCDF4.Variable'>
+ float64 TBCH2(Time, n13_obs)
+     _FillValue: nan
+     long_name: Brightness Temperature of channel 2 (31.65 GHz) at 13 scan positions
+     units: Kelvin [K]
+ unlimited dimensions: 
+ current shape = (213, 13)
+ filling on,
+ 'TBCH3': <class 'netCDF4.Variable'>
+ float64 TBCH3(Time, n13_obs)
+     _FillValue: nan
+     long_name: Brightness Temperature of channel 3 (52.85 GHz) at 13 scan positions
+     units: Kelvin [K]
+ unlimited dimensions: 
+ current shape = (213, 13)
+ filling on,
+ 'TBCH4': <class 'netCDF4.Variable'>
+ float64 TBCH4(Time, n13_obs)
+     _FillValue: nan
+     long_name: Brightness Temperature of channel 4 (53.85 GHz) at 13 scan positions
+     units: Kelvin [K]
+ unlimited dimensions: 
+ current shape = (213, 13)
+ filling on,
+ 'TBCH5': <class 'netCDF4.Variable'>
+ float64 TBCH5(Time, n13_obs)
+     _FillValue: nan
+     long_name: Brightness Temperature of channel 5 (55.45 GHz) at 13 scan positions
+     units: Kelvin [K]
+ unlimited dimensions: 
+ current shape = (213, 13)
+ filling on,
+ 'ELEV': <class 'netCDF4.Variable'>
+ float64 ELEV(Time, n13_obs)
+     _FillValue: nan
+     long_name: Surface Elevation of Observation at 13 scan positions
+     units: [km]
+ unlimited dimensions: 
+ current shape = (213, 13)
+ filling on,
+ 'LAT': <class 'netCDF4.Variable'>
+ float64 LAT(Time, n13_obs)
+     _FillValue: nan
+     long_name: Latitude of Observation at 13 scan positions
+     units: degrees
+ unlimited dimensions: 
+ current shape = (213, 13)
+ filling on,
+ 'LON': <class 'netCDF4.Variable'>
+ float64 LON(Time, n13_obs)
+     _FillValue: nan
+     long_name: Longitude of Observation at 13 scan positions
+     units: degrees
+ unlimited dimensions: 
+ current shape = (213, 13)
+ filling on,
+ 'REFLEC': <class 'netCDF4.Variable'>
+ float64 REFLEC(Time, n13_obs)
+     _FillValue: nan
+     long_name: Surface Reflectivityat at 13 scan positions
+     units: Percentage [%]
+ unlimited dimensions: 
+ current shape = (213, 13)
+ filling on,
+ 'H2OVAP': <class 'netCDF4.Variable'>
+ float64 H2OVAP(Time, n13_obs)
+     _FillValue: nan
+     long_name: H2O Vapor, integrated at 13 scan positions
+     units: [mm]
+ unlimited dimensions: 
+ current shape = (213, 13)
+ filling on,
+ 'H2OLIQ': <class 'netCDF4.Variable'>
+ float64 H2OLIQ(Time, n13_obs)
+     _FillValue: nan
+     long_name: H2O Liquid, integrated at 13 scan positions
+     units: [mm]
+ unlimited dimensions: 
+ current shape = (213, 13)
+ filling on,
+ 'GPT1K': <class 'netCDF4.Variable'>
+ float64 GPT1K(Time, n13_obs)
+     _FillValue: nan
+     long_name: 1000-500 mb Geopotential Thickness at 13 scan positions
+     units: [Dm]
+ unlimited dimensions: 
+ current shape = (213, 13)
+ filling on,
+ 'GPT500': <class 'netCDF4.Variable'>
+ float64 GPT500(Time, n13_obs)
+     _FillValue: nan
+     long_name: 500-250 mb Geopotential Thickness at 13 scan positions
+     units: [Dm]
+ unlimited dimensions: 
+ current shape = (213, 13)
+ filling on,
+ 'GPT250': <class 'netCDF4.Variable'>
+ float64 GPT250(Time, n13_obs)
+     _FillValue: nan
+     long_name: 250-100 mb Geopotential Thickness at 13 scan positions
+     units: [Dm]
+ unlimited dimensions: 
+ current shape = (213, 13)
+ filling on,
+ 'T1000': <class 'netCDF4.Variable'>
+ float64 T1000(Time, n13_obs)
+     _FillValue: nan
+     long_name: 1000 mb Temperature at 13 scan positions
+     units: Kelvin [K]
+ unlimited dimensions: 
+ current shape = (213, 13)
+ filling on,
+ 'T850': <class 'netCDF4.Variable'>
+ float64 T850(Time, n13_obs)
+     _FillValue: nan
+     long_name: 850 mb Temperature at 13 scan positions
+     units: Kelvin [K]
+ unlimited dimensions: 
+ current shape = (213, 13)
+ filling on,
+ 'T700': <class 'netCDF4.Variable'>
+ float64 T700(Time, n13_obs)
+     _FillValue: nan
+     long_name: 700 mb Temperature at 13 scan positions
+     units: Kelvin [K]
+ unlimited dimensions: 
+ current shape = (213, 13)
+ filling on,
+ 'T500': <class 'netCDF4.Variable'>
+ float64 T500(Time, n13_obs)
+     _FillValue: nan
+     long_name: 500 mb Temperature at 13 scan positions
+     units: Kelvin [K]
+ unlimited dimensions: 
+ current shape = (213, 13)
+ filling on,
+ 'T400': <class 'netCDF4.Variable'>
+ float64 T400(Time, n13_obs)
+     _FillValue: nan
+     long_name: 400 mb Temperature at 13 scan positions
+     units: Kelvin [K]
+ unlimited dimensions: 
+ current shape = (213, 13)
+ filling on,
+ 'T300': <class 'netCDF4.Variable'>
+ float64 T300(Time, n13_obs)
+     _FillValue: nan
+     long_name: 300 mb Temperature at 13 scan positions
+     units: Kelvin [K]
+ unlimited dimensions: 
+ current shape = (213, 13)
+ filling on,
+ 'T250': <class 'netCDF4.Variable'>
+ float64 T250(Time, n13_obs)
+     _FillValue: nan
+     long_name: 250 mb Temperature at 13 scan positions
+     units: Kelvin [K]
+ unlimited dimensions: 
+ current shape = (213, 13)
+ filling on,
+ 'T200': <class 'netCDF4.Variable'>
+ float64 T200(Time, n13_obs)
+     _FillValue: nan
+     long_name: 200 mb Temperature at 13 scan positions
+     units: Kelvin [K]
+ unlimited dimensions: 
+ current shape = (213, 13)
+ filling on,
+ 'T150': <class 'netCDF4.Variable'>
+ float64 T150(Time, n13_obs)
+     _FillValue: nan
+     long_name: 150 mb Temperature at 13 scan positions
+     units: Kelvin [K]
+ unlimited dimensions: 
+ current shape = (213, 13)
+ filling on,
+ 'T100': <class 'netCDF4.Variable'>
+ float64 T100(Time, n13_obs)
+     _FillValue: nan
+     long_name: 100 mb Temperature at 13 scan positions
+     units: Kelvin [K]
+ unlimited dimensions: 
+ current shape = (213, 13)
+ filling on,
+ 'T70': <class 'netCDF4.Variable'>
+ float64 T70(Time, n13_obs)
+     _FillValue: nan
+     long_name: 70 mb Temperature at 13 scan positions
+     units: Kelvin [K]
+ unlimited dimensions: 
+ current shape = (213, 13)
+ filling on,
+ 'T50': <class 'netCDF4.Variable'>
+ float64 T50(Time, n13_obs)
+     _FillValue: nan
+     long_name: 50 mb Temperature at 13 scan positions
+     units: Kelvin [K]
+ unlimited dimensions: 
+ current shape = (213, 13)
+ filling on,
+ 'T30': <class 'netCDF4.Variable'>
+ float64 T30(Time, n13_obs)
+     _FillValue: nan
+     long_name: 30 mb Temperature at 13 scan positions
+     units: Kelvin [K]
+ unlimited dimensions: 
+ current shape = (213, 13)
+ filling on,
+ 'T10': <class 'netCDF4.Variable'>
+ float64 T10(Time, n13_obs)
+     _FillValue: nan
+     long_name: 10 mb Temperature at 13 scan positions
+     units: Kelvin [K]
+ unlimited dimensions: 
+ current shape = (213, 13)
+ filling on,
+ 'DIGITA': <class 'netCDF4.Variable'>
+ float64 DIGITA(Time, n160_obs)
+     _FillValue: nan
+     long_name: Digital A Data
+     comment: For a description of the 160 digital indicators, please look up Table 4-2 in the NIMBUS 6 User Guide
+ unlimited dimensions: 
+ current shape = (213, 160)
+ filling on,
+ 'Pitch_error': <class 'netCDF4.Variable'>
+ float64 Pitch_error(Time, n4_obs)
+     _FillValue: nan
+     long_name: Pitch error
+     units: degrees
+ unlimited dimensions: 
+ current shape = (213, 4)
+ filling on,
+ 'Roll_error': <class 'netCDF4.Variable'>
+ float64 Roll_error(Time, n4_obs)
+     _FillValue: nan
+     long_name: Roll error
+     units: degrees
+ unlimited dimensions: 
+ current shape = (213, 4)
+ filling on,
+ 'SATLAT': <class 'netCDF4.Variable'>
+ float64 SATLAT(Time)
+     _FillValue: nan
+     long_name: Latitude of Satellite (nadir)
+     units: degrees
+ unlimited dimensions: 
+ current shape = (213,)
+ filling on,
+ 'SATLON': <class 'netCDF4.Variable'>
+ float64 SATLON(Time)
+     _FillValue: nan
+     long_name: Longitude of Satellite (nadir)
+     units: degrees
+ unlimited dimensions: 
+ current shape = (213,)
+ filling on,
+ 'SATALT': <class 'netCDF4.Variable'>
+ int64 SATALT(Time)
+     long_name: Satellite altitude
+     units: [km]
+ unlimited dimensions: 
+ current shape = (213,)
+ filling on, default _FillValue of -9223372036854775806 used,
+ 'HKEEPT': <class 'netCDF4.Variable'>
+ float64 HKEEPT(Time, n12_obs)
+     _FillValue: nan
+     long_name: Housekeeping Temperature at 12 scan positions
+     units: Kelvin [K]
+ unlimited dimensions: 
+ current shape = (213, 12)
+ filling on,
+ 'ORBIT': <class 'netCDF4.Variable'>
+ int64 ORBIT(Time)
+     long_name: Playback Orbit
+ unlimited dimensions: 
+ current shape = (213,)
+ filling on, default _FillValue of -9223372036854775806 used,
+ 'REFORB': <class 'netCDF4.Variable'>
+ int64 REFORB(Time)
+     long_name: Reference Orbit (format = YYDDDHH)
+ unlimited dimensions: 
+ current shape = (213,)
+ filling on, default _FillValue of -9223372036854775806 used,
+ 'LOST': <class 'netCDF4.Variable'>
+ int64 LOST(Time)
+     long_name: Lost Frames since Last Frame
+ unlimited dimensions: 
+ current shape = (213,)
+ filling on, default _FillValue of -9223372036854775806 used,
+ 'DATFLG': <class 'netCDF4.Variable'>
+ vlen DATFLG(Time)
+     long_name: Data Missing Flag (True/False)
+ vlen data type: <class 'str'>
+ unlimited dimensions: 
+ current shape = (213,),
+ 'ASCFLG': <class 'netCDF4.Variable'>
+ vlen ASCFLG(Time)
+     long_name: Ascending Flag (True/False)
+ vlen data type: <class 'str'>
+ unlimited dimensions: 
+ current shape = (213,),
+ 'FLAG': <class 'netCDF4.Variable'>
+ float64 FLAG(Time, n13_obs)
+     _FillValue: nan
+     long_name: Flags at 13 scan positions
+ unlimited dimensions: 
+ current shape = (213, 13)
+ filling on,
+ 'SPARE1': <class 'netCDF4.Variable'>
+ int64 SPARE1(Time)
+     long_name: Spares (1)
+ unlimited dimensions: 
+ current shape = (213,)
+ filling on, default _FillValue of -9223372036854775806 used,
+ 'SPARE2': <class 'netCDF4.Variable'>
+ float64 SPARE2(Time, n52_obs)
+     _FillValue: nan
+     long_name: Spares (52)
+ unlimited dimensions: 
+ current shape = (213, 52)
+ filling on,
+ 'INANG': <class 'netCDF4.Variable'>
+ float64 INANG(n13_obs)
+     _FillValue: nan
+     long_name: Incidence Angle at 13 scan positions from NIMBUS 6 User Guide
+     units: degree
+ unlimited dimensions: 
+ current shape = (13,)
+ filling on,
+ 'Time': <class 'netCDF4.Variable'>
+ float64 Time(Time)
+     _FillValue: nan
+     units: days since 1970-01-01
+     calendar: proleptic_gregorian
+ unlimited dimensions: 
+ current shape = (213,)
+ filling on,
+ 'n4_obs': <class 'netCDF4.Variable'>
+ int64 n4_obs(n4_obs)
+ unlimited dimensions: 
+ current shape = (4,)
+ filling on, default _FillValue of -9223372036854775806 used,
+ 'n12_obs': <class 'netCDF4.Variable'>
+ int64 n12_obs(n12_obs)
+ unlimited dimensions: 
+ current shape = (12,)
+ filling on, default _FillValue of -9223372036854775806 used,
+ 'n13_obs': <class 'netCDF4.Variable'>
+ int64 n13_obs(n13_obs)
+ unlimited dimensions: 
+ current shape = (13,)
+ filling on, default _FillValue of -9223372036854775806 used,
+ 'n52_obs': <class 'netCDF4.Variable'>
+ int64 n52_obs(n52_obs)
+ unlimited dimensions: 
+ current shape = (52,)
+ filling on, default _FillValue of -9223372036854775806 used,
+ 'n160_obs': <class 'netCDF4.Variable'>
+ int64 n160_obs(n160_obs)
+ unlimited dimensions: 
+ current shape = (160,)
+ filling on, default _FillValue of -9223372036854775806 used,
+ 'obs': <class 'netCDF4.Variable'>
+ int64 obs(obs)
+ unlimited dimensions: 
+ current shape = (13,)
+ filling on, default _FillValue of -9223372036854775806 used,
+ 'u10': <class 'netCDF4.Variable'>
+ float64 u10(Time, obs)
+     _FillValue: nan
+     long_name: 10 metre U wind component
+     units: m s**-1
+ unlimited dimensions: 
+ current shape = (213, 13)
+ filling on,
+ 'v10': <class 'netCDF4.Variable'>
+ float64 v10(Time, obs)
+     _FillValue: nan
+     long_name: 10 metre V wind component
+     units: m s**-1
+ unlimited dimensions: 
+ current shape = (213, 13)
+ filling on,
+ 't2m': <class 'netCDF4.Variable'>
+ float64 t2m(Time, obs)
+     _FillValue: nan
+     long_name: 2 metre temperature
+     units: K
+ unlimited dimensions: 
+ current shape = (213, 13)
+ filling on,
+ 'istl1': <class 'netCDF4.Variable'>
+ float64 istl1(Time, obs)
+     _FillValue: nan
+     long_name: Ice temperature layer 1
+     units: K
+ unlimited dimensions: 
+ current shape = (213, 13)
+ filling on,
+ 'istl2': <class 'netCDF4.Variable'>
+ float64 istl2(Time, obs)
+     _FillValue: nan
+     long_name: Ice temperature layer 2
+     units: K
+ unlimited dimensions: 
+ current shape = (213, 13)
+ filling on,
+ 'istl3': <class 'netCDF4.Variable'>
+ float64 istl3(Time, obs)
+     _FillValue: nan
+     long_name: Ice temperature layer 3
+     units: K
+ unlimited dimensions: 
+ current shape = (213, 13)
+ filling on,
+ 'istl4': <class 'netCDF4.Variable'>
+ float64 istl4(Time, obs)
+     _FillValue: nan
+     long_name: Ice temperature layer 4
+     units: K
+ unlimited dimensions: 
+ current shape = (213, 13)
+ filling on,
+ 'lsm': <class 'netCDF4.Variable'>
+ float64 lsm(Time, obs)
+     _FillValue: nan
+     long_name: Land-sea mask
+     units: (0 - 1)
+     standard_name: land_binary_mask
+ unlimited dimensions: 
+ current shape = (213, 13)
+ filling on,
+ 'msl': <class 'netCDF4.Variable'>
+ float64 msl(Time, obs)
+     _FillValue: nan
+     long_name: Mean sea level pressure
+     units: Pa
+     standard_name: air_pressure_at_mean_sea_level
+ unlimited dimensions: 
+ current shape = (213, 13)
+ filling on,
+ 'siconc': <class 'netCDF4.Variable'>
+ float64 siconc(Time, obs)
+     _FillValue: nan
+     long_name: Sea ice area fraction
+     units: (0 - 1)
+     standard_name: sea_ice_area_fraction
+ unlimited dimensions: 
+ current shape = (213, 13)
+ filling on,
+ 'sst': <class 'netCDF4.Variable'>
+ float64 sst(Time, obs)
+     _FillValue: nan
+     long_name: Sea surface temperature
+     units: K
+ unlimited dimensions: 
+ current shape = (213, 13)
+ filling on,
+ 'skt': <class 'netCDF4.Variable'>
+ float64 skt(Time, obs)
+     _FillValue: nan
+     long_name: Skin temperature
+     units: K
+ unlimited dimensions: 
+ current shape = (213, 13)
+ filling on,
+ 'sp': <class 'netCDF4.Variable'>
+ float64 sp(Time, obs)
+     _FillValue: nan
+     long_name: Surface pressure
+     units: Pa
+     standard_name: surface_air_pressure
+ unlimited dimensions: 
+ current shape = (213, 13)
+ filling on,
+ 'tcw': <class 'netCDF4.Variable'>
+ float64 tcw(Time, obs)
+     _FillValue: nan
+     long_name: Total column water
+     units: kg m**-2
+ unlimited dimensions: 
+ current shape = (213, 13)
+ filling on,
+ 'tcwv': <class 'netCDF4.Variable'>
+ float64 tcwv(Time, obs)
+     _FillValue: nan
+     long_name: Total column water vapour
+     units: kg m**-2
+     standard_name: lwe_thickness_of_atmosphere_mass_content_of_water_vapor
+ unlimited dimensions: 
+ current shape = (213, 13)
+ filling on,
+ 'era_time': <class 'netCDF4.Variable'>
+ int64 era_time(Time)
+     long_name: Time of ERA5 (nearest neighbor to ESMR observation)
+     units: hours since 1976-02-29
+     calendar: proleptic_gregorian
+ unlimited dimensions: 
+ current shape = (213,)
+ filling on, default _FillValue of -9223372036854775806 used}

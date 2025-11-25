@@ -10,10 +10,11 @@ import pandas as pd
 
 def sort_by_date():
     # PARAMETERS-------------------------------------------------   
-    input_dir = Path("/Users/dahlia/Projects/DTU/Semester 2/30350 remote sensing/seaicemapping/inputs/SCAMS_colocated")  
-    out_dir = Path("/Users/dahlia/Projects/DTU/Semester 2/30350 remote sensing/seaicemapping/preprocessed-data/march1976_daily")
+    input_dir = Path("/Users/dahlia/Projects/DTU/Semester 2/30350 remote sensing/seaicemapping/SCAMS_tbfixed")  
+    out_dir = Path("/Users/dahlia/Projects/DTU/Semester 2/30350 remote sensing/seaicemapping/preprocessed-data")
     out_dir.mkdir(exist_ok=True)
-    vars_of_interest = ['LAT','LON','TBCH1','TBCH2','lsm','siconc']
+    vars_of_interest = ['LAT','LON','TBCH1','TBCH2','lsm','siconc',
+                        'H2OVAP', 'H20LIQ','u10','v10','sst','INANG','istl1']
     #-------------------------------------------------------------
 
     files = sorted(input_dir.glob("*.nc"))
