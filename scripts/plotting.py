@@ -207,120 +207,52 @@ def plot_raw_vs_smoothed(
 
     fig.show()
 
-def plot_sic_side_by_side(day_ds, SIC, day, 
-                          projection=ccrs.NorthPolarStereo(),
+def plot_sic_side_by_side(day_ds, day,
+                          hemisphere = "north",
                           title_prefix="Computed SIC (1-channel)"):
 
-    # =======================================================================
-    # 1. Extract raw arrays (2D: time × n13_obs)
-    # =======================================================================
-    lon = np.array(day_ds.LON)
-    lat = np.array(day_ds.LAT)
-    sic_1ch = np.array(SIC)
+    # Extract variables from the dataset
+    lat = day_ds.LAT
+    lon = day_ds.LON
+    model = day_ds.siconc
+    calculated = day_ds.SIC_1ch
 
-    if lon.shape != lat.shape:
-        raise ValueError("LAT and LON must have the same shape.")
-
-    # Match SIC shape to swath if needed
-    if sic_1ch.shape != lon.shape:
-        try:
-            sic_1ch = np.broadcast_to(sic_1ch, lon.shape)
-        except Exception:
-            sic_1ch = np.full(lon.shape, np.nan)
-
-    # =======================================================================
-    # 2. Interpolate ERA5 SIC onto the swath grid (CRITICAL FIX)
-    # =======================================================================
-    #
-    # ERA5 SIC is on a regular lat/lon grid → must be sampled at swath points.
-    #
-    # This produces a 2D array aligned with (lon, lat).
-    #
-    # =======================================================================
-
-    if "siconc" in day_ds:
-        try:
-            siconc_swath = day_ds.siconc.interp(
-                LAT=day_ds.LAT,
-                LON=day_ds.LON,
-                method="nearest"
-            )
-        except Exception:
-            # fallback: ERA5 may have wrong dim names
-            siconc_swath = np.full(lon.shape, np.nan)
+    # create map with geographic projection
+    if hemisphere == "north":
+        fig, axs = plt.subplots(
+            1, 2, figsize=(14, 7),
+            subplot_kw={"projection": ccrs.NorthPolarStereo()}
+        )
+        ax1, ax2 = axs
     else:
-        siconc_swath = np.full(lon.shape, np.nan)
-
-    siconc_swath = np.array(siconc_swath)
-
-    # =======================================================================
-    # 3. Mask invalid coordinate points
-    # =======================================================================
-    mask_invalid = np.isnan(lon) | np.isnan(lat)
-
-    sic_flat = sic_1ch[~mask_invalid]
-    era5_flat = siconc_swath[~mask_invalid]
-
-    lon_flat = lon[~mask_invalid]
-    lat_flat = lat[~mask_invalid]
+        fig, axs = plt.subplots(
+            1, 2, figsize=(14, 7),
+            subplot_kw={"projection": ccrs.SouthPolarStereo()}
+        )
+        ax1, ax2 = axs
+    
 
     # =======================================================================
-    # 4. Compute map extent based on valid swath region
-    # =======================================================================
-    if lon_flat.size > 0:
-        lon_min = float(np.nanmin(lon_flat))
-        lon_max = float(np.nanmax(lon_flat))
-        lat_min = float(np.nanmin(lat_flat))
-        lat_max = float(np.nanmax(lat_flat))
-    else:
-        lon_min, lon_max = -180, 180
-        lat_min, lat_max = 60, 90  # fallback for Arctic
-
-    # =======================================================================
-    # 5. Create figure + two subplots
-    # =======================================================================
-    fig, axs = plt.subplots(
-        1, 2, figsize=(14, 7),
-        subplot_kw={"projection": projection}
-    )
-    ax1, ax2 = axs
-
-    # =======================================================================
-    # LEFT PANEL: computed SIC
+    # LEFT PANEL: SIC  calculated
     # =======================================================================
     ax1.set_title(f"{title_prefix} — Day {day}", fontsize=12)
     ax1.coastlines(resolution="110m")
     ax1.add_feature(cfeature.LAND, facecolor="lightgray")
 
-    sc1 = ax1.scatter(
-        lon_flat, lat_flat, c=sic_flat,
-        cmap="viridis", vmin=0, vmax=1,
-        s=7, marker="s", transform=ccrs.PlateCarree(), rasterized=True
-    )
+    sc1 = ax1.scatter(lon, lat, c=calculated, cmap='viridis', s=10, transform=ccrs.PlateCarree())
     cb1 = fig.colorbar(sc1, ax=ax1, fraction=0.046, pad=0.02)
     cb1.set_label("SIC (0–1)")
 
     # =======================================================================
-    # RIGHT PANEL: ERA5 SIC (interpolated onto swath)
+    # RIGHT PANEL: model
     # =======================================================================
     ax2.set_title(f"ERA5 SIC — Day {day}", fontsize=12)
     ax2.coastlines(resolution="110m")
     ax2.add_feature(cfeature.LAND, facecolor="lightgray")
 
-    sc2 = ax2.scatter(
-        lon_flat, lat_flat, c=era5_flat,
-        cmap="viridis", vmin=0, vmax=1,
-        s=7, marker="s", transform=ccrs.PlateCarree(), rasterized=True
-    )
+    sc2 = ax2.scatter(lon, lat, c=model, cmap='viridis', s=10, transform=ccrs.PlateCarree())
     cb2 = fig.colorbar(sc2, ax=ax2, fraction=0.046, pad=0.02)
     cb2.set_label("SIC (0–1)")
-
-    # =======================================================================
-    # 6. Set map extents
-    # =======================================================================
-    extent = [lon_min, lon_max, lat_min, lat_max]
-    ax1.set_extent(extent, crs=ccrs.PlateCarree())
-    ax2.set_extent(extent, crs=ccrs.PlateCarree())
 
     plt.tight_layout()
     plt.show()
