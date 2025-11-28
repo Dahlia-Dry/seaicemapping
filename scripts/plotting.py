@@ -100,15 +100,19 @@ def plot_tiepoints(day, day_ds, tiepoints, scan_positions=13):
 
     fig.show()
 
-def plot_geo(ds):
+def plot_geo(ds, cmap, hemisphere = None,cmap_label=None,title=None,color="viridis"):
     # Extract variables from the dataset
     lat = ds.LAT
     lon = ds.LON
-    tbch1 = ds.TBCH1
 
     # Create the map with geographic projection
     plt.figure(figsize=(12, 8))
-    ax = plt.axes(projection=ccrs.PlateCarree())
+    if hemisphere == "north":
+        ax = plt.axes(projection=ccrs.NorthPolarStereo())
+    elif hemisphere == "south":
+        ax = plt.axes(projection=ccrs.SouthPolarStereo())
+    else:
+        ax = plt.axes(projection=ccrs.PlateCarree())
 
     # Add coastlines and continents
     ax.coastlines()
@@ -117,9 +121,9 @@ def plot_geo(ds):
     ax.gridlines(draw_labels=True)
 
     # Plot the TBCH1 data
-    scatter = ax.scatter(lon, lat, c=tbch1, cmap='viridis', s=10, transform=ccrs.PlateCarree())
-    plt.colorbar(scatter, label='TBCH1 (K)')
-    plt.title('TBCH1 Temperature Map')
+    scatter = ax.scatter(lon, lat, c=cmap, cmap=color, s=10, transform=ccrs.PlateCarree())
+    plt.colorbar(scatter, label=cmap_label)
+    plt.title(title)
     plt.tight_layout()
     plt.show()
 
@@ -152,7 +156,7 @@ def plot_raw_vs_smoothed(
             go.Scatter(
                 x=days,
                 y=raw_data[scan],
-                mode="lines",
+                mode="lines+markers",
                 name=f"Raw Scan {scan}",
                 line=dict(width=2, dash="dot"),
                 visible=(scan == 0)
@@ -163,7 +167,7 @@ def plot_raw_vs_smoothed(
             go.Scatter(
                 x=days,
                 y=smooth_data[scan],
-                mode="lines",
+                mode="lines+markers",
                 name=f"Smoothed Scan {scan}",
                 line=dict(width=3),
                 visible=(scan == 0)

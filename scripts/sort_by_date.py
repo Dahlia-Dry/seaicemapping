@@ -13,8 +13,8 @@ def sort_by_date():
     input_dir = Path("/Users/dahlia/Projects/DTU/Semester 2/30350 remote sensing/seaicemapping/SCAMS_tbfixed")  
     out_dir = Path("/Users/dahlia/Projects/DTU/Semester 2/30350 remote sensing/seaicemapping/preprocessed-data")
     out_dir.mkdir(exist_ok=True)
-    vars_of_interest = ['LAT','LON','TBCH1','TBCH2','lsm','siconc',
-                        'H2OVAP', 'H20LIQ','u10','v10','sst','INANG','istl1']
+    vars_of_interest = ['LAT','LON','TBCH1','TBCH2','lsm','siconc', 'ELEV',
+                        'H2OVAP', 'H2OLIQ','u10','v10','sst','INANG','istl1', 't2m']
     #-------------------------------------------------------------
 
     files = sorted(input_dir.glob("*.nc"))
